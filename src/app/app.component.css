@@ -1,0 +1,275 @@
+/* Header & Menu Area CSS */
+
+.header_area {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    -webkit-transition-duration: 700ms;
+    transition-duration: 700ms;
+}
+
+.sticky .header_area {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 70px;
+    z-index: 9999;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 0;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #fff;
+    font-weight: 700;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    color: #ff0000;
+}
+
+
+
+
+/* Hero Area CSS */
+
+.caviar-hero-area {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.caviar-hero-area .owl-next {
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 188px;
+    border-radius: 50%;
+    right: 353px;
+    z-index: 10;
+    text-align: center;
+    line-height: 42px;
+    font-size: 22px;
+    color: rgba(51, 51, 51, 0.8);
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.caviar-hero-area .owl-next:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 52px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+.single-hero-slides {
+    position: relative;
+    z-index: 1;
+    height: 770px;
+    width: 100%;
+}
+
+.single-hero-slides:after {
+    position: absolute;
+    width: calc(50% - 112px);
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+}
+
+.single-hero-slides:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+}
+
+.hero-slides-nav {
+    width: 375px;
+    height: 210px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.hero-slides-nav:after {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+}
+
+
+
+
+
+/* Base CSS */
+
+.bg-img {
+    background-position: center center;
+    background-size: cover;
+}
+
+.caviar-btn {
+    font-family: 'Work Sans', sans-serif;
+    min-width: 180px;
+    height: 54px;
+    border: 1px solid #b2b2b2;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 0;
+    padding: 0 30px;
+    line-height: 52px;
+    color: #000;
+}
+
+.caviar-btn:hover,
+.caviar-btn:focus {
+    color: #ff0000;
+    font-weight: 500;
+}
+
+.caviar-btn > span {
+    width: 8px;
+    height: 8px;
+    background-color: #ff0000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.bg-img {
+    background-position: center center;
+    background-size: cover;
+}
+
+.section-padding-150 {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.section-padding-150-0 {
+    padding-top: 150px;
+    padding-bottom: 0;
+}
+
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 70px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.pt-200 {
+    padding-top: 200px;
+}
+
+
+
+
+/* About Us Area CSS */
+
+.caviar-about-us-area {
+    overflow-x: hidden;
+}
+
+.about-us-thumbnail {
+    box-shadow: 3px 5px 45px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+.about-us-thumbnail > img {
+    width: 100%;
+}
+
+.about-us-content span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff0000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.about-us-content > p {
+    margin-bottom: 0;
+}
+
+.about-us-second-part {
+    position: relative;
+    z-index: 1;
+}
+
+.about-us-second-part:after {
+    content: 'About Us';
+    position: absolute;
+    top: 110px;
+    font-size: 150px;
+    left: 0;
+    color: rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    line-height: 1;
+    z-index: -1;
+}
+
+.about-us-second-part:before {
+    position: absolute;
+    content: "";
+    top: 120px;
+    left: 110px;
+    background-image: url(resources/core-img/about-dots.png);
+    width: 100%;
+    height: 78px;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
