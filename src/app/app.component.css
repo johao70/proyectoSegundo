@@ -148,6 +148,17 @@
     z-index: -1;
 }
 
+.imagen-hero1 {
+    background-image: url(resources/bg-img/hero-1.jpg);
+}
+
+.imagen-hero2 {
+    background-image: url(resources/bg-img/hero-2.jpg);
+}
+
+.about-1 {
+    background-image: url(resources/bg-img/about-1.jpg);
+}
 
 
 
@@ -286,6 +297,8 @@ img {
     z-index: -1;
     background-repeat: no-repeat;
 }
+
+
 
 
 
