@@ -18,13 +18,10 @@
                               <a class="nav-link" href="#menu">Menu</a>
                           </li>                          
                           <li class="nav-item">
-                              <a class="nav-link" href="#testimonial">Testimonios</a>
-                          </li>
-                          <li class="nav-item">
                               <a class="nav-link" href="#reservation">Reservaciones</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link" href="contact.html">Contactanos</a>
+                              <a class="nav-link" href="contact.html">Contactanos</a>                   <!-- REVISAR - hacer html solo para contacto -->
                           </li>
                       </ul>                      
                   </div>
@@ -116,4 +113,93 @@
         </div>
     </div>
 </section>
-<!-- ****** Fin Área Acerca de ****** -->
+<!-- ****** Fin Área - Acerca de ****** -->
+
+    <!-- ****** Area de Menu Inicio ****** -->
+    <section class="caviar-dish-menu" id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 menu-heading">
+                    <div class="section-heading text-center">
+                        <h2>Platillos Principales</h2>
+                    </div>
+                    <!-- btn -->
+                    <a href="menu.html" class="btn caviar-btn"><span></span> Mirar el Menu</a>          <!-- REVISAR - hacer html solo para los platillos -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="0.5s">
+                        <img src="resources/menu-img/dish-1.png" alt="">
+                        <div class="dish-info">
+                            <h6 class="dish-name">Encebollado</h6>
+                            <p class="dish-price">$2,50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="1s">
+                        <img src="resources/menu-img/dish-2.png" alt="">
+                        <div class="dish-info">
+                            <h6 class="dish-name">Pescado Frito</h6>
+                            <p class="dish-price">$3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="caviar-single-dish wow fadeInUp" data-wow-delay="1.5s">
+                        <img src="resources/menu-img/dish-3.png" alt="">
+                        <div class="dish-info">
+                            <h6 class="dish-name">Almuerzos</h6>
+                            <p class="dish-price">$2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ****** Area de Menu Fin ****** -->
+
+    <!-- ****** Area de testimonios Inicio ****** -->
+
+    <!-- ****** NO NECESARIO POR EL MOMENTO ****** -->
+
+    <!-- ****** Area de testimonios Fin ****** -->
+
+
+    <!-- ****** Inicio area de RESERVA ****** -->
+    <section class="caviar-reservation-area d-md-flex align-items-center" id="reservation">
+        <div class="reservation-form-area d-flex justify-content-end">
+            <div class="reservation-form">
+                <div class="section-heading">
+                    <h2>Reservaciones</h2>
+                </div>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="time" class="form-control">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="text" class="form-control" placeholder="Número de Personas">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="text" class="form-control" placeholder="Apellidos y Nombres">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="reservation-message" class="form-control" id="reservationMessage" cols="30" rows="10" placeholder="Tú mensaje"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn caviar-btn"><span></span> Reservar tu mesa</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="reservation-side-thumb wow fadeInRightBig" data-wow-delay="0.5s">
+            <img src="resources/bg-img/hero-3.jpg" alt="">
+        </div>
+    </section>
+    <!-- ****** Final area de RESERVA ****** -->
