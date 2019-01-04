@@ -29,6 +29,18 @@ export class DashboardComponent implements OnInit {
                 label: 'Third slide label',
                 text:
                     'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+            },
+            {
+                imagePath: 'assets/images/slider4.jpg',
+                label: 'Third slide label',
+                text:
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+            },
+            {
+                imagePath: 'assets/images/slider5.jpg',
+                label: 'Third slide label',
+                text:
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
             }
         );
 
