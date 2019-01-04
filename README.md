@@ -1,47 +1,30 @@
-# SB Admin rewritten in Angular7 and Bootstrap 4
+# Sistema de Reservas de Mesas en Restaurante
 
-Simple Dashboard Admin App built using Angular 7 and Bootstrap 4
+Simple Sistema de Reservas de Mesas en Restaurante.
 
-This project is a port of the famous Free Admin Bootstrap Theme [SB Admin v7.0](http://startbootstrap.com/template-overviews/sb-admin-2/) to Angular7 Theme.
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
-Powered by [StartAngular](http://startangular.com/) & [StrapUI](http://strapui.com/)
+### Introducción
 
-## [Demo](http://rawgit.com/start-angular/SB-Admin-BS4-Angular-7/master/dist/)
-
-## [SB Admin Material version](https://github.com/start-javascript/sb-admin-material)
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
-
-### Introduction
-
-Provides fast, reliable and extensible starter for the development of Angular projects.
-
-`sb-admin-bs4-angular7` provides the following features:
-
-*   Developed using boostrap-v4.0.0
+*   Desarrollado usando boostrap-v4.0.0
 *   angular-v7.0.2
 *   angular/cli-v7.0.4
 *   [ng-bootstrap-v4.0.0](https://github.com/ng-bootstrap/)
-*   [ngx-translate-v11.0.0](https://github.com/ngx-translate)
-*   Following the best practices.
-*   Ahead-of-Time compilation support.
-*   Official Angular i18n support.
-*   Production and development builds.
-*   Tree-Shaking production builds.
+*   Siguiendo las mejores practicas.
 
-### How to start
+### ¿Como empezar?
 
-**Note** that this seed project requires **node >=v8.9.0 and npm >=4**.
+**Nota** Este proyecto requiere **node >= v8.9.0 y npm >=4**.
 
-In order to start the project use:
+Orden para iniciar el proyecto:
 
 ```bash
-$ git clone https://github.com/start-angular/SB-Admin-BS4-Angular-7
-$ cd SB-Admin-BS4-Angular-7
-# install the project's dependencies
+$ git clone https://github.com/johao70/proyectoSegundo
+$ cd proyectoSegundo
+# Instalar dependencias del proyecto.
 $ npm install
-# watches your files and uses livereload by default run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 $ npm start
+# Navegar a "http://localhost:4200/". La app automaticamente se revcarga si realiza cualquier cambios en cualquiera de los archivos.
 # prod build, will output the production application in `dist`
 # the produced code can be deployed (rsynced) to a remote server
 $ npm run build
