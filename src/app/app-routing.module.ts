@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutPageComponent } from './about-page/about-page.component';
-import { MenuComponent } from './menu/menu.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AuthGuard } from './shared';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: 'home', component: HomeComponent },
-    { path: 'about', component: AboutPageComponent },
-    { path: 'menu', component: MenuComponent },
-    { path: 'contact', component: ContactFormComponent },
-    { path: 'gohome', redirectTo: 'home' }
+    { path: '', loadChildren: './layout/layout.module#LayoutModule', canActivate: [AuthGuard] },
+    { path: 'login', loadChildren: './login/login.module#LoginModule' },
+    { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
+    { path: 'error', loadChildren: './server-error/server-error.module#ServerErrorModule' },
+    { path: 'access-denied', loadChildren: './access-denied/access-denied.module#AccessDeniedModule' },
+    { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
+    { path: '**', redirectTo: 'not-found' }
 ];
+
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
