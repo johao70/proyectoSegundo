@@ -15,9 +15,9 @@ export class DashboardComponent implements OnInit {
         this.sliders.push(
             {
                 imagePath: 'assets/images/slider1.jpg',
-                label: 'First slide label',
+                label: 'Restaurante',
                 text:
-                    'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+                    'Moderno.'
             },
             {
                 imagePath: 'assets/images/slider2.jpg',
