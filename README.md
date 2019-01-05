@@ -24,5 +24,5 @@ $ cd proyectoSegundo
 # Instalar dependencias del proyecto.
 $ npm install
 $ npm start
-# Navegar a "http://localhost:4200/". La app automaticamente se recarga si realiza cualquier cambios en cualquiera de los archivos.
+# Ingresar a "http://localhost:4200/".
 ```
