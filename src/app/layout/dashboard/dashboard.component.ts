@@ -21,26 +21,26 @@ export class DashboardComponent implements OnInit {
             },
             {
                 imagePath: 'assets/images/slider2.jpg',
-                label: 'Second slide label',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                label: 'Restaurante',
+                text: 'Comodidad.'
             },
             {
                 imagePath: 'assets/images/slider3.jpg',
-                label: 'Third slide label',
+                label: 'Restaurante',
                 text:
-                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+                    'Elegante.'
             },
             {
                 imagePath: 'assets/images/slider4.jpg',
-                label: 'Third slide label',
+                label: 'Restaurante',
                 text:
-                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+                    'Calidad.'
             },
             {
                 imagePath: 'assets/images/slider5.jpg',
-                label: 'Third slide label',
+                label: 'Restaurante',
                 text:
-                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur.'
+                    'Confianza.'
             }
         );
 
