@@ -31,5 +31,6 @@
             while($resultado = $statement -> fetch());
                 $array = $resultado;
         }
+        return $array;
     }
 ?>
