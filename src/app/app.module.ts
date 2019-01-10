@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
     imports: [
         CommonModule,
         BrowserModule,
+        CalendarModule,
         BrowserAnimationsModule,
         AppRoutingModule
     ],

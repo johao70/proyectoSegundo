@@ -1,7 +1,7 @@
 <div [@routerTransition]>
     <h1>Formulario de reserva.</h1>
     <hr>
-    <div>        
+    <div>
         <form role="form">
             <div class="form-content">
 
@@ -12,14 +12,14 @@
                             <option>Pasaporte</option>
                             <option>R.U.C.</option>
                       </select>
-                </div>            
+                </div>
 
                 <div class="form-group col-md-3">
                     <input type="text" class="form-control input-underline input-lg" id="" placeholder="Número de Identificación">
                 </div>
-                
+
                 <div class="form-group col-md-3">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Fecha de Nacimiento">
+                    <input  class="form-control" type="date" name="fecha">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -32,7 +32,8 @@
 
                 <div class="form-group col-md-3">
                     <input type="text" class="form-control input-underline input-lg" id="" placeholder="Teléfono/Celular">
-                </div>                
+                </div>
+                <a class="btn rounded-btn" [routerLink]="['/signup']"> Registrarse</a>
             </div>
         </form>
     </div>
