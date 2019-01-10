@@ -1,40 +1,72 @@
 <div [@routerTransition]>
-    <h1>Formulario de reserva.</h1>
-    <hr>
-    <div>
-        <form role="form">
-            <div class="form-content">
+  <h1>Formulario de reserva.</h1>
+  <hr>
+  <div>
+    <form role="form">
+      <div class="form-content">
+        <th>
+          Nombre
+          <input type="text" pInputText class="form-control" size="50" placeholder="Nombre">
 
-                <div class="form-group col-md-3">
-                    <label >Tipo de Identificación</label>
-                        <select class="form-control">
-                            <option>Cédula de Identidad</option>
-                            <option>Pasaporte</option>
-                            <option>R.U.C.</option>
-                      </select>
-                </div>
+        </th>
 
-                <div class="form-group col-md-3">
-                    <input type="text" class="form-control input-underline input-lg" id="" placeholder="Número de Identificación">
-                </div>
+        <th>
 
-                <div class="form-group col-md-3">
-                    <input  class="form-control" type="date" name="fecha">
-                </div>
+          <div style="margin-left: 40px"> Mesas</div>
+          <div style="margin-left: 40px">
 
-                <div class="form-group col-md-6">
-                    <input type="text" class="form-control input-underline input-lg" id="" placeholder="Apellidos y Nombres">
-                </div>
 
-                <div class="form-group col-md-6">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Correo Electrónico">
-                </div>
+            <select id="lista " name="Prioridad" class="form-control">
+              <option value="Mesa para 2">Mesa para 2</option>
+              <option value="Mesa para 4">Mesa para 4</option>
+              <option value="Mesa Familiar 5">Mesa Familiar 5</option>
+              <option value="Mesa Familiar 6">Mesa Familiar 6</option>
+              <option value="Mesa Familiar 9">Mesa Familiar9</option>
+            </select>
+          </div>
+        </th>
 
-                <div class="form-group col-md-3">
-                    <input type="text" class="form-control input-underline input-lg" id="" placeholder="Teléfono/Celular">
-                </div>
-                <a class="btn rounded-btn" [routerLink]="['/signup']"> Registrarse</a>
-            </div>
-        </form>
-    </div>
+        <th>
+          <div style="margin-left: 60px">Fecha</div>
+
+          <div style="margin-left: 60px">
+            <input class="form-control" type="date" name="fecha">
+          </div>
+        </th>
+
+
+      </div>
+      <div class="col-12">
+        <th>
+          Texto
+          <input type="text" pInputText class="form-control" size="80" placeholder="Descripcion">
+        </th>
+        <th>
+
+          <div style="margin-left: 40px"> Tipo</div>
+          <div style="margin-left: 40px">
+
+            <body>
+              <select id="lista " name="lista" class="form-control">
+                <option value="Cita">Cita</option>
+                <option value="Reunion">Reunion</option>
+                <option value="Familiar">Familiar</option>
+                </select>
+
+
+            </body>
+          </div>
+
+        </th>
+
+        <th>
+          <div style="margin-left: 40px">Seleccione Destino</div>
+          <div style="margin-left: 40px">
+              <div style="text-align:center;padding:1em 0;"> <h4><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/es/city/3652462"><span style="color:gray;">Hora actual en</span><br />Quito, Ecuador</a></h4> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=es&size=small&timezone=America%2FGuayaquil" width="100%" height="90" frameborder="0" seamless></iframe> </div>
+          </div>
+        </th>
+      </div>
+
+    </form>
+  </div>
 </div>
