@@ -1,10 +1,10 @@
 {
   "name": "Restaurante",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "Apache",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
+    "start": "ng serve --o",
     "build": "ng build --prod",
     "gitbuild": "ng build --prod --base-href /start-angular/SB-Admin-BS4-Angular-7/master/dist/",
     "test": "ng test",
@@ -33,8 +33,6 @@
     "primeng": "^7.0.4",
     "reflect-metadata": "^0.1.12",
     "rxjs": "6.3.3",
-    "sequelize": "^4.42.0",
-    "sequelize-typescript": "^0.6.6",
     "tslib": "^1.9.0",
     "yarn": "1.12.3",
     "zone.js": "0.8.26"
