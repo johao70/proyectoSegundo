@@ -1,13 +1,13 @@
 <div [@routerTransition]>
-  <h1>Formulario de reserva.</h1>
+  <h1>Reserva.</h1>
 
   <hr>
   <div>
     <form role="form">
       <div class="form-content">
         <th>
-          Nombre
-          <input type="text" pInputText class="form-control" size="50" placeholder="Nombre">
+          <h6>Nombre</h6>
+          <input type="text" pInputText class="form-control" size="50" placeholder="Apellidos y Nombres">
 
         </th>
 
@@ -20,9 +20,7 @@
             <select id="lista " name="Prioridad" class="form-control">
               <option value="Mesa para 2">Mesa para 2</option>
               <option value="Mesa para 4">Mesa para 4</option>
-              <option value="Mesa Familiar 5">Mesa Familiar 5</option>
-              <option value="Mesa Familiar 6">Mesa Familiar 6</option>
-              <option value="Mesa Familiar 9">Mesa Familiar9</option>
+              <option value="Mesa Familiar 5">Mesa Familiar</option>
             </select>
           </div>
         </th>
@@ -66,4 +64,4 @@
     </form>
   </div>
 </div>
-<button class="btn rounded-btn" color ="primary" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Reserva completa </button>
+<button class="btn rounded-btn" color ="primary" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Reservar </button>
