@@ -4,26 +4,18 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import {
-    TimelineComponent,
-    NotificationComponent,
-    ChatComponent
-} from './components';
-import { StatModule } from '../../shared';
+import { TimelineComponent } from './components';
 
 @NgModule({
     imports: [
         CommonModule,
         NgbCarouselModule,
         NgbAlertModule,
-        DashboardRoutingModule,
-        StatModule
+        DashboardRoutingModule
     ],
     declarations: [
         DashboardComponent,
-        TimelineComponent,
-        NotificationComponent,
-        ChatComponent
+        TimelineComponent
     ]
 })
 export class DashboardModule {}
