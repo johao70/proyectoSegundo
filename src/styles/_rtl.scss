@@ -29,26 +29,6 @@
         text-align: left;
     }
 
-    .breadcrumb {
-        direction: ltr;
-        justify-content: flex-end;
-
-        * {
-            direction: ltr;
-        }
-    }
-
-    .datepicker-input {
-        direction: ltr;
-        .dropdown-menu {
-            direction: ltr;
-
-            * {
-                direction: ltr;
-            }
-        }
-    }
-
     .input-group {
         direction: ltr;
     }
