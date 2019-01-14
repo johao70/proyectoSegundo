@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthGuard } from './shared';
 import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { CalendarModule } from 'primeng/calendar';
         AppRoutingModule
     ],
     declarations: [AppComponent],
-    providers: [AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

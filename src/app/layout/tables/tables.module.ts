@@ -4,14 +4,12 @@ import { CalendarModule } from 'primeng/calendar';
 
 import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables.component';
-import { PageHeaderModule } from './../../shared';
 
 @NgModule({
     imports: [
       CommonModule,
       TablesRoutingModule,
-      CalendarModule,
-      PageHeaderModule
+      CalendarModule
     ],
     declarations: [TablesComponent]
 })
