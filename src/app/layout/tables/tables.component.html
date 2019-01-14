@@ -6,62 +6,64 @@
     <form role="form">
       <div class="form-content">
         <th>
-          <h6>Nombre</h6>
-          <input type="text" pInputText class="form-control" size="50" placeholder="Apellidos y Nombres">
-
+          Nombre
+          <input type="text" pInputText class="form-control" size="70 " placeholder="Nombre quien reserva">
         </th>
-
-        <th>
-
-          <div style="margin-left: 40px"> Mesas</div>
-          <div style="margin-left: 40px">
-
-
-            <select id="lista " name="Prioridad" class="form-control">
-              <option value="Mesa para 2">Mesa para 2</option>
-              <option value="Mesa para 4">Mesa para 4</option>
-              <option value="Mesa Familiar 5">Mesa Familiar</option>
-            </select>
-          </div>
-        </th>
-
-        <th>
-          <div style="margin-left: 60px">Fecha</div>
-
-          <div style="margin-left: 60px">
-            <input class="form-control" type="date" name="fecha">
-          </div>
-        </th>
-
-
       </div>
+
+      &nbsp;
+      &nbsp;
+
+      <th>
+        <div style="margin-left: 40px"> Mesas</div>
+        <div style="margin-left: 40px">
+          <select id="lista " name="Prioridad" class="form-control">
+            <option value="Mesa para 2">Mesa para 2</option>
+            <option value="Mesa para 4">Mesa para 4</option>
+            <option value="Mesa Familiar 5">Mesa Familiar</option>
+          </select>
+        </div>
+      </th>
+
+      <th>
+        <div style="margin-left: 60px">Fecha</div>
+        <div style="margin-left: 60px">
+          <input class="form-control" type="date" name="fecha">
+        </div>
+      </th>
+
+      &nbsp;
+      &nbsp;
+
       <div class="col-12">
         <th>
-          Texto
-          <input type="text" pInputText class="form-control" size="80" placeholder="Descripcion">
+            Descripcion
+          <textarea type="text" pInputText class="form-control" size="45" rows="10" cols="40" placeholder="Descripcion"></textarea>
         </th>
-        <th>
 
+        <th>
           <div style="margin-left: 40px"> Tipo</div>
           <div style="margin-left: 40px">
-
             <body>
               <select id="lista " name="lista" class="form-control">
                 <option value="Cita">Cita</option>
                 <option value="Reunion">Reunion</option>
                 <option value="Familiar">Familiar</option>
-                </select>
-
-
+              </select>
             </body>
           </div>
+          <br>
+          <br>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;          
 
-        </th>
-
-
+          <button class="btn rounded-btn" [routerLink]="['/dashboard']"> Reservar </button>
       </div>
-
     </form>
   </div>
 </div>
-<button class="btn rounded-btn" color ="primary" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Reservar </button>

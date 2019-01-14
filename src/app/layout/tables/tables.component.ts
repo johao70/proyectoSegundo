@@ -8,7 +8,22 @@ import { routerTransition } from '../../router.animations';
     animations: [routerTransition()]
 })
 export class TablesComponent implements OnInit {
-    constructor() {}
-
+  nombre = '';
+  prioridad = '';
+  date = '';
+  texto = '';
+  lista = '';
+  Seleccione = '';
+  create: any;
+  busy: Promise<any>;
+  entidadSeleccionada: any;
+  Seleccionada: number;
+  constructor( ) { }
+  estaSeleccionado(porVerificar): boolean {
+    if (this.entidadSeleccionada == null) {
+        return false;
+    }
+    return porVerificar.id === this.entidadSeleccionada.id;
+}
     ngOnInit() {}
 }
