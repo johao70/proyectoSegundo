@@ -26,6 +26,20 @@
       </th>
 
       <th>
+        <div style="margin-left: 40px"> Tipo</div>
+        <div style="margin-left: 40px">
+
+          <body>
+            <select id="lista " name="lista" class="form-control">
+              <option value="Cita">Cita</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Familiar">Familiar</option>
+            </select>
+          </body>
+        </div>
+      </th>
+
+      <th>
         <div style="margin-left: 60px">Fecha</div>
         <div style="margin-left: 60px">
           <input class="form-control" type="date" name="fecha">
@@ -37,21 +51,18 @@
 
       <div class="col-12">
         <th>
-            Descripcion
+          Descripcion
           <textarea type="text" pInputText class="form-control" size="45" rows="10" cols="40" placeholder="Descripcion"></textarea>
         </th>
 
         <th>
-          <div style="margin-left: 40px"> Tipo</div>
-          <div style="margin-left: 40px">
-            <body>
-              <select id="lista " name="lista" class="form-control">
-                <option value="Cita">Cita</option>
-                <option value="Reunion">Reunion</option>
-                <option value="Familiar">Familiar</option>
-              </select>
-            </body>
-          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
           <br>
           <br>
           &nbsp;
@@ -60,7 +71,9 @@
           &nbsp;
           &nbsp;
           &nbsp;
-          &nbsp;          
+          &nbsp;
+          &nbsp;
+          &nbsp;
 
           <button class="btn rounded-btn" [routerLink]="['/dashboard']"> Reservar </button>
       </div>
