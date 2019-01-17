@@ -5,29 +5,32 @@
                 <h2 class="form-title">Registrarse</h2>
                 <form method="POST" class="register-form" id="register-form">
                     <div class="form-group">
-                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
                         <input type="text" name="name" id="name" placeholder="Apellidos y Nombres"/>
                     </div>
                     <div class="form-group">
-                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <label for="email"><i class="fa fa-at" aria-hidden="true"></i></label>
                         <input type="email" name="email" id="email" placeholder="Correo Electronico"/>
                     </div>
                     <div class="form-group">
-                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <label for="pass"><i class="fa fa-save" aria-hidden="true"></i></label>
                         <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
                     </div>
                     <div class="form-group">
-                        <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                        <label for="re-pass"><i class="fa fa-save" aria-hidden="true"></i></label>
                         <input type="password" name="re_pass" id="re_pass" placeholder="Repetir contraseña"/>
                     </div>
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" value="Registrarse"/>
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Registrarse" [routerLink]="['/dashboard']"/>
                     </div>
                 </form>
             </div>
             <div class="signup-image">
-                <figure><img src="../../assets/images/signup-image.jpg" alt="sing up image"></figure>
-                <a href="#" class="signup-image-link">Ya me encuentro registrado</a>
+                <figure><img src="../../assets/images/signup-image.jpg"></figure>
+                <a [routerLink]="['/login']"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; &nbsp;Ya me encuentro registrado</a>
+                <br>
+                <br>
+                <a [routerLink]="['/dashboard']">Volver a inicio</a>
             </div>
         </div>
     </div>
