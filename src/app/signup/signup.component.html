@@ -5,23 +5,31 @@
                 <h2 class="form-title">Registrarse</h2>
                 <form method="POST" class="register-form" id="register-form">
                     <div class="form-group">
-                        <label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
+                        <label><i class="fa fa-user" aria-hidden="true"></i></label>
                         <input type="text" name="name" id="name" placeholder="Apellidos y Nombres"/>
                     </div>
                     <div class="form-group">
-                        <label for="email"><i class="fa fa-at" aria-hidden="true"></i></label>
+                        <label><i class="fa fa-id-card" aria-hidden="true"></i></label>
+                        <input type="text" name="CI" id="CI" placeholder="Numero de Cedula"/>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-phone" aria-hidden="true"></i></label>
+                        <input type="text" name="telf" id="telf" placeholder="Telefono/Celular"/>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa fa-at" aria-hidden="true"></i></label>
                         <input type="email" name="email" id="email" placeholder="Correo Electronico"/>
                     </div>
                     <div class="form-group">
-                        <label for="pass"><i class="fa fa-save" aria-hidden="true"></i></label>
+                        <label><i class="fa fa-key" aria-hidden="true"></i></label>
                         <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
                     </div>
                     <div class="form-group">
-                        <label for="re-pass"><i class="fa fa-save" aria-hidden="true"></i></label>
+                        <label><i class="fa fa-key" aria-hidden="true"></i></label>
                         <input type="password" name="re_pass" id="re_pass" placeholder="Repetir contraseña"/>
                     </div>
                     <div class="form-group form-button">
-                            <input type="submit" name="signup" id="signup" class="form-submit" value="Registrarse" [routerLink]="['/dashboard']"/>
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Registrarse" [routerLink]="['/dashboard']"/>
                     </div>
                 </form>
             </div>
