@@ -3,33 +3,33 @@
         <div class="signup-content">
             <div class="signup-form">
                 <h2 class="form-title">Registrarse</h2>
-                <form method="POST" class="register-form" id="register-form">
+                <form method="post" class="register-form">
                     <div class="form-group">
                         <label><i class="fa fa-user" aria-hidden="true"></i></label>
-                        <input type="text" name="name" id="name" placeholder="Apellidos y Nombres"/>
+                        <input type="text" name="pers_nombre" placeholder="Apellidos y Nombres"/>
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-id-card" aria-hidden="true"></i></label>
-                        <input type="text" name="CI" id="CI" placeholder="Numero de Cedula"/>
+                        <input type="text" name="pers_numero_identificacion" placeholder="Numero de Cedula"/>
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-phone" aria-hidden="true"></i></label>
-                        <input type="text" name="telf" id="telf" placeholder="Telefono/Celular"/>
+                        <input type="text" name="pers_telefono" placeholder="Telefono/Celular"/>
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-at" aria-hidden="true"></i></label>
-                        <input type="email" name="email" id="email" placeholder="Correo Electronico"/>
+                        <input type="email" name="pers_correo" placeholder="Correo Electronico"/>
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-key" aria-hidden="true"></i></label>
-                        <input type="password" name="pass" id="pass" placeholder="Contraseña"/>
+                        <input type="password" name="pers_clave" placeholder="Contraseña"/>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label><i class="fa fa-key" aria-hidden="true"></i></label>
-                        <input type="password" name="re_pass" id="re_pass" placeholder="Repetir contraseña"/>
-                    </div>
+                        <input type="password" name="re_pass" placeholder="Repetir contraseña"/>
+                    </div> -->
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" value="Registrarse" [routerLink]="['/dashboard']"/>
+                        <input type="submit" value="Registrarse" class="form-submit" [routerLink]="['/dashboard']"/>
                     </div>
                 </form>
             </div>
@@ -38,7 +38,7 @@
                 <a [routerLink]="['/login']"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; &nbsp;Ya me encuentro registrado</a>
                 <br>
                 <br>
-                <a [routerLink]="['/dashboard']">Volver a inicio</a>
+                <a [routerLink]="['/dashboard']">Volver a inicio</a>                
             </div>
         </div>
     </div>

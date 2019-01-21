@@ -12,8 +12,4 @@ export class SignupComponent implements OnInit {
     constructor(public router: Router) {}
 
     ngOnInit() {}
-
-    onLoggedin() {
-        localStorage.setItem('isLoggedin', 'true');
-    }
 }

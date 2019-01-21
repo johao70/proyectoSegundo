@@ -19,7 +19,6 @@ create table persona(
 	pers_telefono varchar(10),
 	pers_correo varchar(150) not null,
 	pers_clave varchar(25) not null,
-	pers_fecha_nacimiento date,
 	tipo_pers_sec integer
 )
 
