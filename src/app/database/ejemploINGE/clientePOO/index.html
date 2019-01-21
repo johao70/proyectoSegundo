@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h1>Registro Cliente</h1>
+    <form method='post' action="controlador/insertar.php">
+        <table>
+            <tr>
+                <td>
+                    Cedula de Identidad
+                </td>
+                <td>
+                    <input type="text" name="pers_numero_identificacion">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Apellidos y Nombres
+                </td>
+                <td>
+                    <input type="text" name="pers_nombre">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Telefono/Celular
+                </td>
+                <td>
+                    <input type="text" name="pers_telefono">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Correo Electronico
+                </td>
+                <td>
+                    <input type="text" name="pers_correo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Registrar">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        <a href="verclientes.php" >Clientes Registrados</a>       
+    </div>
+</body>
+</html>
