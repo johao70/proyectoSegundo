@@ -12,5 +12,11 @@
 */
 
 $router->get('/', function () use ($router) {
-    return "Hola Mundo";
+    return $router -> app -> version();
 });
+
+
+$router->post('/person', ['uses' => 'PersonController@createPerson']);
+$router->put('/person', ['uses' => 'PersonController@updateCategories']);
+$router->delete('/person', ['uses' => 'PersonController@destroyPerson']);
+$router->get('/person', ['uses' => 'PersonController@index']);
