@@ -16,49 +16,22 @@ class PersonController extends Controller
 
     }
 
-
-    public function getPerson($id)
-    {
-        $person = Person::find($id);
-        if($person)
-        {
-            return response()->json($person, 200);
-        }
-
-        return response()->json(["Persona no encontrada"], 404);
-
-    }
-
     public function createPerson(Request $request)
     {
-        $person = new Person;  
-        $person->pers_ci = $request->pers_ci;
-        $person->nombre = $request->nombre;
-        $person->telefono = $request->telefono;
-        $person->correo = $request->correo;
-        $person->clave = $request->clave;
-        $person->save();
-        return response()->json($person);  
+        $data = $request -> json() -> all();
+        $sql = "insert into person(pers_ci, nombre, telefono, correo, clave) values(?,?,?,?,?)";
+        $parameters = [$data['pers_ci'], $data['nombre'], $data['telefono'], $data['correo'], $data['clave']];
+        $response = DB::select($sql, $parameters);
+        return $response;
     }
 
-    public function updateCategories(Request $request,$id)
+    // public function updatePerson(Request $request,$id)
+    public function updatePerson(Request $request)
      { 
-
-        $person= Person::find($id);
-            
-        $person->pers_ci = $request->pers_ci;
-        $person->nombre = $request->nombre;
-        $person->telefono = $request->telefono;
-        $person->correo = $request->correo;
-        $person->clave = $request->clave;
-        $person->save();
-        return response()->json($person);
-     }
-
-     public function destroyPerson($id)
-     {
-        $person = Person::find($id);
-        $person->delete();
-        return response()->json('La Persona fue eliminada');
+        $data = $request -> json() -> all();
+        $sql = "update person set pers_ci = ?, nombre = ?, telefono = ?, correo = ?, clave = ?";
+        $parameters = [$data['pers_ci'], $data['nombre'], $data['telefono'], $data['correo'], $data['clave']];
+        $response = DB::select($sql, $parameters);
+        return $response;
      }
 }

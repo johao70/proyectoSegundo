@@ -19,6 +19,7 @@ class CreateMesaTable extends Migration
             $table->foreign('tipo_id')->references('id')->on('tipo_mesa');
             $table->integer('estado_id');
             $table->foreign('estado_id')->references('id')->on('estado');
+            $table->string('nombre');
             $table->timestamps();
         });
     }

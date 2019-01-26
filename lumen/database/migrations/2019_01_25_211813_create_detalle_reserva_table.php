@@ -19,6 +19,7 @@ class CreateDetalleReservaTable extends Migration
             $table->foreign('mesa_id')->references('id')->on('mesa');
             $table->integer('reserva_id');
             $table->foreign('reserva_id')->references('id')->on('reserva');
+            $table->string('numeroUsuarios');
             $table->timestamps();
         });
     }
