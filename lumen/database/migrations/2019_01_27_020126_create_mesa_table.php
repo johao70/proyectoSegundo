@@ -14,13 +14,11 @@ class CreateMesaTable extends Migration
     public function up()
     {
         Schema::create('mesa', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('mesa_id');
             $table->integer('tipo_id');
-            $table->foreign('tipo_id')->references('id')->on('tipo_mesa');
+            $table->foreign('tipo_id')->references('tipo_id')->on('tipo_mesa');
             $table->integer('estado_id');
-            $table->foreign('estado_id')->references('id')->on('estado');
-            $table->string('nombre');
-            $table->timestamps();
+            $table->foreign('estado_id')->references('estado_id')->on('estado');
         });
     }
 

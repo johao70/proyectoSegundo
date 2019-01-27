@@ -14,11 +14,10 @@ class CreateReservaTable extends Migration
     public function up()
     {
         Schema::create('reserva', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('reserva_id');
             $table->integer('pers_ci')->unsigned();
-            $table->foreign('pers_ci')->references('id')->on('person');
+            $table->foreign('pers_ci')->references('pers_ci')->on('person');
             $table->date('fecha');
-            $table->timestamps();
         });
     }
 

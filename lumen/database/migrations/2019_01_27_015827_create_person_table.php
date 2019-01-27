@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTipoMesaTable extends Migration
+class CreatePersonTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateTipoMesaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_mesa', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('descripcion');
-            $table->string('capacidad');
-            $table->timestamps();
+        Schema::create('person', function (Blueprint $table) {
+            $table ->increments('pers_ci');
+            $table ->string('nombre');
+            $table ->string('telefono');
+            $table ->string('correo');
+            $table ->string('clave');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateTipoMesaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipomesa');
+        Schema::dropIfExists('person');
     }
 }
