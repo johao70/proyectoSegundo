@@ -1,4 +1,4 @@
-export class Reservas{
+export class Reserva{
 
   private reserva_id: Number;
   private pers_ci: Number;
@@ -6,7 +6,7 @@ export class Reservas{
 
   constructor ($reserva_id: Number, $pers_ci: Number, $fecha: Date){
     this.reserva_id = $reserva_id;
-    this.pers_ci = $pers_ci
-    this.fecha = $fecha
+    this.pers_ci = $pers_ci;
+    this.fecha = $fecha;
   }
 }
