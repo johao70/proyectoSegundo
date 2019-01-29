@@ -25,7 +25,6 @@ class Tipo_mesaController extends Controller
         return $response;
     }
 
-    // public function updateTipo_mesa(Request $request,$id)
     public function updateTipo_mesa(Request $request)
      { 
         $data = $request -> json() -> all();

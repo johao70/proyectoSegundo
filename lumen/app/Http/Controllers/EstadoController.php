@@ -25,7 +25,6 @@ class EstadoController extends Controller
         return $response;
     }
 
-    // public function updateEstado(Request $request,$id)
     public function updateEstado(Request $request)
      { 
         $data = $request -> json() -> all();

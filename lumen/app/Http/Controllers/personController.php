@@ -25,7 +25,6 @@ class PersonController extends Controller
         return $response;
     }
 
-    // public function updatePerson(Request $request,$id)
     public function updatePerson(Request $request)
      { 
         $data = $request -> json() -> all();

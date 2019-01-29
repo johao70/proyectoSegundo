@@ -25,7 +25,6 @@ class ReservaController extends Controller
         return $response;
     }
 
-    // public function updateReserva(Request $request,$id)
     public function updateReserva(Request $request)
      { 
         $data = $request -> json() -> all();
