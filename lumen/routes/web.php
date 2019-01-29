@@ -22,10 +22,10 @@ $router->get('/person', ['uses' => 'PersonController@index']);
 
 
 //reserva
-$router->post('/reserva', ['uses' => 'ReservaController@createReserva']);
+$router->post('/reserva/create', ['uses' => 'ReservaController@createReserva']);
 $router->put('/reserva', ['uses' => 'ReservaController@updateReserva']);
 $router->delete('/reserva', ['uses' => 'ReservaController@destroyReserva']);
-$router->get('/reserva', ['uses' => 'ReservaController@index']);
+$router->get('/reserva/get', ['uses' => 'ReservaController@index']);
 
 
 //detalle_reserva
