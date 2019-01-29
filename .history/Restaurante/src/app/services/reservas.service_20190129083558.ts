@@ -13,7 +13,7 @@ const httpOptions = {
 // const API_URL = '/reserva/get', ['uses' => 'ReservaController@index';
 const API_URL_CREATE = 'http://localhost:8000/reserva/create';
 const API_URL_DELATE = 'http://localhost:8080/sisEventosWs/deleteMultimedia/';
-@Injectable( )
+@Injectable()
 
 export class ReservasService {
     apiUrl: string;

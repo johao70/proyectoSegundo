@@ -1,5 +1,6 @@
-import { HttpClient, HttpHeaders, } from '@angular/common/http';
-import { Injectable, Observable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import {Observable }from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Reservas } from '../models/reservas';
@@ -13,7 +14,7 @@ const httpOptions = {
 // const API_URL = '/reserva/get', ['uses' => 'ReservaController@index';
 const API_URL_CREATE = 'http://localhost:8000/reserva/create';
 const API_URL_DELATE = 'http://localhost:8080/sisEventosWs/deleteMultimedia/';
-@Injectable( )
+@Injectable()
 
 export class ReservasService {
     apiUrl: string;

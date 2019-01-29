@@ -1,5 +1,6 @@
-import { HttpClient, HttpHeaders, } from '@angular/common/http';
-import { Injectable, Observable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { Injectable, Type } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Reservas } from '../models/reservas';
@@ -13,15 +14,15 @@ const httpOptions = {
 // const API_URL = '/reserva/get', ['uses' => 'ReservaController@index';
 const API_URL_CREATE = 'http://localhost:8000/reserva/create';
 const API_URL_DELATE = 'http://localhost:8080/sisEventosWs/deleteMultimedia/';
-@Injectable( )
+@Injectable()
 
-export class ReservasService {
+export class OpcionService {
     apiUrl: string;
     constructor(private http: HttpClient) { }
 
 
 
-    crearOActualizar(reservas: Reservas): Observable.Observable<Reservas[]> {
+    crearOActualizar(reservas: Reservas): Observable<Reservas[]> {
         return this.http.post<Reservas[]>(API_URL_CREATE, reservas);
     }
 }
