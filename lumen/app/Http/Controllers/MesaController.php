@@ -25,7 +25,6 @@ class MesaController extends Controller
         return $response;
     }
 
-    // public function updateMesa(Request $request,$id)
     public function updateMesa(Request $request)
      { 
         $data = $request -> json() -> all();

@@ -25,7 +25,6 @@ class Detalle_reservaController extends Controller
         return $response;
     }
 
-    // public function updateDetalle_reserva(Request $request,$id)
     public function updateDetalle_reserva(Request $request)
      { 
         $data = $request -> json() -> all();
