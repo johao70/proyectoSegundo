@@ -14,11 +14,11 @@ class PersonTableSeeder extends Seeder
     public function run()
     {
         DB::table('person') -> insert([
-            'pers_ci' => '1718842642',
-            'nombre' => 'Johao Perlaza',
-            'telefono' => '0978970998',
-            'correo' => 'perlazajohao@gmail.com',
-            'clave' => '123456',
+            'pers_ci' => '123456789',
+            'nombre' => 'Juan Rojas',
+            'telefono' => '0987456321',
+            'correo' => 'rojasjuan@gmail.com',
+            'clave' => '123roger',
         ]);
     }
 }

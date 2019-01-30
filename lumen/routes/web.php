@@ -18,14 +18,15 @@ $router->get('/', function () use ($router) {
 //persona
 $router->post('/person', ['uses' => 'PersonController@createPerson']);
 $router->put('/person', ['uses' => 'PersonController@updatePerson']);
+$router->delete('/person', ['uses' => 'ReservaController@destroyPerson']);
 $router->get('/person', ['uses' => 'PersonController@index']);
 
 
 //reserva
-$router->post('/reserva/crear', ['uses' => 'ReservaController@createReserva']);
-$router->put('/reserva/actualizar', ['uses' => 'ReservaController@updateReserva']);
-$router->delete('/reserva/eliminar', ['uses' => 'ReservaController@destroyReserva']);
-$router->get('/reserva/get', ['uses' => 'ReservaController@index']);
+$router->post('/reserva', ['uses' => 'ReservaController@createReserva']);
+$router->put('/reserva', ['uses' => 'ReservaController@updateReserva']);
+$router->delete('/reserva', ['uses' => 'ReservaController@destroyReserva']);
+$router->get('/reserva', ['uses' => 'ReservaController@index']);
 
 
 //detalle_reserva

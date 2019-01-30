@@ -14,8 +14,8 @@ class ReservaTableSeeder extends Seeder
     public function run()
     {
         DB::table('reserva') -> insert([
-            'pers_ci' => '1718842642',
-            'fecha' => '26-01-2019',
+            'pers_ci' => '123456789',
+            'fecha' => '15-05-2018',
         ]);
     }
 }

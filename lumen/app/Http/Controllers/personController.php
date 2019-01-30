@@ -33,4 +33,12 @@ class PersonController extends Controller
         $response = DB::select($sql, $parameters);
         return $response;
      }
+
+    // public function destroyPerson(Request $request){
+    //     $data = $request -> json() -> all();
+    //     $sql = "delete from person where id = ?";
+    //     $parameters = [$data['id']];
+    //     $response = DB::select($sql, $parameters);
+    //     return $response;
+    // }
 }

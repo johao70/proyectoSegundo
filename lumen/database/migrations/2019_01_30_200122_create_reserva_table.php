@@ -14,9 +14,9 @@ class CreateReservaTable extends Migration
     public function up()
     {
         Schema::create('reserva', function (Blueprint $table) {
-            $table->increments('reserva_id');
-            $table->integer('pers_ci')->unsigned();
-            $table->foreign('pers_ci')->references('pers_ci')->on('person');
+            $table->increments('reserva_id');            
+            $table->integer('id')->unsigned();
+            $table->foreign('id')->references('id')->on('person');
             $table->date('fecha');
         });
     }
