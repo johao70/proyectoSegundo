@@ -22,9 +22,9 @@ $router->get('/person', ['uses' => 'PersonController@index']);
 
 
 //reserva
-$router->post('/reserva/create', ['uses' => 'ReservaController@createReserva']);
-$router->put('/reserva', ['uses' => 'ReservaController@updateReserva']);
-$router->delete('/reserva', ['uses' => 'ReservaController@destroyReserva']);
+$router->post('/reserva/crear', ['uses' => 'ReservaController@createReserva']);
+$router->put('/reserva/actualizar', ['uses' => 'ReservaController@updateReserva']);
+$router->delete('/reserva/eliminar', ['uses' => 'ReservaController@destroyReserva']);
 $router->get('/reserva/get', ['uses' => 'ReservaController@index']);
 
 

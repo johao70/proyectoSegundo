@@ -1,23 +1,27 @@
-<div [@routerTransition]>
+<div>
   <h1>Reserva.</h1>
 
   <hr>
   <div>
     <form role="form">
       <div class="form-content">
-        <th>
-          Nombre
-          <input type="text" pInputText class="form-control" size="70 " placeholder="Nombre quien reserva">
-        </th>
+        <div> Nombre </div>
+        <th> <input type="text" class="form-control" size="70 " placeholder="Nombre quien reserva"> </th>
       </div>
 
       &nbsp;
-      &nbsp;
 
       <th>
-        <div> Mesas </div>
+        <div>Fecha</div>
         <div>
-          <select id="lista " name="Prioridad" class="form-control">
+          <input class="form-control" type="date" name="fecha">
+        </div>
+      </th>
+      
+      <th>
+        <div style="margin-left: 20px"> Mesas </div>
+        <div style="margin-left: 20px">
+          <select class="form-control">
             <option value="Mesa para 2">Mesa para 2</option>
             <option value="Mesa para 4">Mesa para 4</option>
             <option value="Mesa Familiar 5">Mesa Familiar</option>
@@ -28,61 +32,17 @@
       <th>
         <div style="margin-left: 20px"> N° Personas </div>
         <div style="margin-left: 20px">
-          <input type="number" class="form-control">
+          <input type="number" min="1" class="form-control">
         </div>
       </th>
 
-      <th>
-        <div style="margin-left: 30px"> Tipo </div>
-        <div style="margin-left: 30px">
 
-          <body>
-            <select id="lista " name="lista" class="form-control">
-              <option value="Cita">Cita</option>
-              <option value="Reunion">Reunion</option>
-              <option value="Familiar">Familiar</option>
-            </select>
-          </body>
-        </div>
-      </th>
-
-      <th>
-        <div style="margin-left: 60px">Fecha</div>
-        <div style="margin-left: 60px">
-          <input class="form-control" type="date" name="fecha">
-        </div>
-      </th>
 
       &nbsp;
       &nbsp;
 
-      <div class="col-12">
-        <th>
-          Descripcion
-          <textarea type="text" pInputText class="form-control" size="45" rows="10" cols="40" placeholder="Descripcion"></textarea>
-        </th>
-
-        <th>
-
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-
-          <button class="btn rounded-btn" [routerLink]="['/dashboard']"> Reservar </button>
+      <div>
+        <button type="submit" class="btn rounded-btn"> Reservar </button>
       </div>
     </form>
   </div>
