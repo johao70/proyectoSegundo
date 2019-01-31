@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule } from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
+import { ReservaService } from './service/reserva.service';
 
 @NgModule({
     imports: [
@@ -16,9 +16,9 @@ import { FormsModule } from '@angular/forms';
         CalendarModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        FormsModule,
         HttpModule
     ],
+    providers: [ReservaService],
     declarations: [AppComponent],
     bootstrap: [AppComponent]
 })

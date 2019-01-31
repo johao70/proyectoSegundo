@@ -1,8 +1,9 @@
+<section class="signup">
     <div class="container">
         <div class="signup-content">
             <div class="signup-form">
                 <h2 class="form-title">Registrarse</h2>
-                <form>
+                <form class="register-form">
                     <div class="form-group">
                         <label><i class="fa fa-user" aria-hidden="true"></i></label>
                         <input type="text" name="pers_nombre" placeholder="Apellidos y Nombres" required>
@@ -26,14 +27,15 @@
                     <div class="form-group form-button">
                         <input type="submit" value="Registrarse" class="form-submit">
                     </div>
+                </form>  
             </div>
             <div class="signup-image">
                 <figure><img src="../../assets/images/signup-image.jpg"></figure>
                 <a [routerLink]="['/login']"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; &nbsp;Ya me encuentro registrado</a>
                 <br>
                 <br>
-                <a [routerLink]="['/dashboard']">Volver a inicio</a>
-            </form>             
+                <a [routerLink]="['/dashboard']">Volver a inicio</a>           
             </div>
         </div>
     </div>
+</section>
