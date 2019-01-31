@@ -5,8 +5,8 @@
   <div>
     <form>
       <div class="form-content">
-        <div> Nombre </div>
-        <th> <input class="form-control" type="text" size="70" placeholder="Nombre quien reserva"> </th>
+        <div> Cedula de Identidad </div>
+        <th> <input class="form-control" type="text" size="70" placeholder="Cedula de Identidad - Persona que reserva"> </th>
       </div>
 
       &nbsp;
@@ -14,7 +14,7 @@
       <th>
         <div>Fecha</div>
         <div>
-          <input class="form-control" type="date" name="fecha">
+          <input class="form-control" type="date">
         </div>
       </th>
       
@@ -40,7 +40,7 @@
       &nbsp;
 
       <div>
-        <button type="submit" class="btn rounded-btn"> Reservar </button>
+        <button (click)="addReserva(name.value, price.value)" class="btn rounded-btn"> Reservar </button>
       </div>
     </form>
   </div>
