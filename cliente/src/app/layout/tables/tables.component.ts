@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
-import { ReservaService } from '../../service/reserva.service'
+import { Http } from '@angular/http';
 
 @Component({
     selector: 'app-tables',
@@ -9,7 +9,7 @@ import { ReservaService } from '../../service/reserva.service'
     animations: [routerTransition()]
 })
 export class TablesComponent implements OnInit {
-  constructor(private reservaservice: ReservaService) { }
+  constructor(private http: Http) { }
     
     ngOnInit() {}
     }
