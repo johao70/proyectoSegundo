@@ -10,7 +10,20 @@ import { HttpClient } from '@angular/common/http';
     animations: [routerTransition()]
 })
 export class SignupComponent implements OnInit {
+    nombre = '';
+    pers_ci = '';
+    telefono = '';
+    correo = '';
+    clave = '';
+    entidadSeleccionada: any;
     constructor(public router: Router, private http: HttpClient) {}
+
+    estaSeleccionado(porVerificar): boolean {
+        if (this.entidadSeleccionada == null) {
+            return false;
+        }
+        return porVerificar.id === this.entidadSeleccionada.id;
+    }
 
     addPerson(nombre, pers_ci, telefono, correo, clave) {
         this.http.post('http://localhost:8000/person',JSON.stringify(nombre)).toPromise().then(r => {console.log(r);}).catch(

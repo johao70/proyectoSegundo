@@ -3,38 +3,43 @@
         <div class="signup-content">
             <div class="signup-form">
                 <h2 class="form-title">Registrarse</h2>
-                <form class="register-form">
+                <form action="registro" method="post" class="form-register" onsubmit="return validar();">
+                    <script src="validar.js"></script>
+
                     <div class="form-group">
+
                         <label><i class="fa fa-user" aria-hidden="true"></i></label>
                         <input type="text" name="nombre" placeholder="Apellidos y Nombres" required>
+                        <!-- <input [(ngModel)]="textoTwo" #texto="ngModel" type="text" id="texto" name="texto" placeholder="texto" -->
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-id-card" aria-hidden="true"></i></label>
-                        <input type="text" name="pers_ci" placeholder="Numero de Cedula"/>
+                        <input type="text" name="pers_ci" placeholder="Numero de Cedula" />
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-phone" aria-hidden="true"></i></label>
-                        <input type="text" name="telefono" placeholder="Telefono/Celular"/>
+                        <input type="text" name="telefono" placeholder="Telefono/Celular" />
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-at" aria-hidden="true"></i></label>
-                        <input type="email" name="correo" placeholder="Correo Electronico"/>
+                        <input type="email" name="correo" placeholder="Correo Electronico" />
                     </div>
                     <div class="form-group">
                         <label><i class="fa fa-key" aria-hidden="true"></i></label>
-                        <input type="password" name="clave" placeholder="Contraseña"/>
+                        <input type="password" name="clave" placeholder="Contraseña" />
                     </div>
                     <div class="form-group form-button">
                         <a class="form-submit" [routerLink]="['/login']" (click)="addPerson(nombre)">Registrarse :v</a>
                     </div>
-                </form>  
+                </form>
             </div>
             <div class="signup-image">
                 <figure><img src="../../assets/images/signup-image.jpg"></figure>
-                <a [routerLink]="['/login']"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; &nbsp;Ya me encuentro registrado</a>
+                <a [routerLink]="['/login']"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; &nbsp;Ya me encuentro
+                    registrado</a>
                 <br>
                 <br>
-                <a [routerLink]="['/dashboard']">Volver a inicio</a>           
+                <a [routerLink]="['/dashboard']">Volver a inicio</a>
             </div>
         </div>
     </div>

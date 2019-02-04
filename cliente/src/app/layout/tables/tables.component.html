@@ -1,4 +1,5 @@
 <div>
+
   <h1>Reserva.</h1>
 
   <hr>
@@ -6,40 +7,59 @@
     <form>
       <div class="form-content">
         <div> Cedula de Identidad </div>
-        <th> <input class="form-control" type="text" size="70" placeholder="Cedula de Identidad - Persona que reserva"> </th>
+        <th> <input class="form-control" type="text" size="70" placeholder="Cedula de Identidad - Persona que reserva">
+        </th>
       </div>
 
       &nbsp;
 
+      
       <th>
-        <div>Fecha</div>
+        <div>Fecha de reservación</div>
         <div>
           <input class="form-control" type="date">
         </div>
       </th>
-      
+
       <th>
-        <div style="margin-left: 20px"> Mesas </div>
+        <div style="margin-left: 20px"> ¿ Cuantas mesas desea reservar ?</div>
         <div style="margin-left: 20px">
           <select class="form-control">
-            <option value="1">Mesa para 2</option>
-            <option value="2">Mesa para 4</option>
-            <option value="3">Mesa Familiar</option>
+            <option value="1">1 Mesa</option>
+            <option value="2">2 Mesas</option>
+            <option value="3">3 Mesas</option>
+            <option value="4">4 Mesas</option>
+            <option value="5">5 Mesas</option>
+
           </select>
         </div>
       </th>
 
       <th>
-        <div style="margin-left: 20px"> N° Personas </div>
+        <div style="margin-left: 20px"> Numero de personas </div>
         <div style="margin-left: 20px">
-          <input type="number" min="1" class="form-control">
+          <input type="number" min="1" max="20" class="form-control">
         </div>
       </th>
 
       &nbsp;
       &nbsp;
 
-      <div>        
+      <th>
+        <div style="margin-left: 20px"> Hora </div>
+        <div style="margin-left: 20px">
+          <select class="form-control">
+            <option value="1">10:00</option>
+            <option value="2">13:00</option>
+            <option value="3">18:00</option>
+          </select>
+        </div>
+      </th>
+
+      &nbsp;
+      &nbsp;
+
+      <div>
         <button class="btn rounded-btn"> Reservar </button>
       </div>
     </form>
