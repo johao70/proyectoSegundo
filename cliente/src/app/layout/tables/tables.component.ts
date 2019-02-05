@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
-import { Http } from '@angular/http';
 
 @Component({
     selector: 'app-tables',
@@ -9,7 +8,7 @@ import { Http } from '@angular/http';
     animations: [routerTransition()]
 })
 export class TablesComponent implements OnInit {
-  constructor(private http: Http) { }
+  constructor() { }
     
     ngOnInit() {}
     }

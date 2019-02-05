@@ -9,14 +9,14 @@ export class PersonService {
   constructor(private http: HttpClient) { }
 
   addPerson(data = {
-    "pers_ci": "123456789-5",
-    "nombre": "joel dasd :v", 
-    "telefono": "09999984", 
-    "correo": "juan@gmail.com", 
-    "clave": "roger1234:v"
+    "pers_ci": "171884264-2",
+    "nombre": "Johao Perlaza", 
+    "telefono": "0978970998", 
+    "correo": "perlazajohao@gmail.com", 
+    "clave": "johao:v"
   }) {
     const url = environment.API_URL + 'person';
     console.log(data);
-    return this.http.post(url, JSON.stringify(data));
+    return this.http.post(url,JSON.stringify(data));
   }  
 }
