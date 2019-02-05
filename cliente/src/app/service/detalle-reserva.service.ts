@@ -5,9 +5,14 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DetalleReservaService {
 
   constructor(private http: HttpClient) { }
 
-
+  addDetallereserva(data: any) {
+    const url = environment.API_URL + 'detalle_reserva';
+    console.log(data);
+    return this.http.post(url,JSON.stringify(data));
+  }
 }

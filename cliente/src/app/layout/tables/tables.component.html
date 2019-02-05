@@ -4,10 +4,10 @@
 
   <hr>
   <div>
-    <form>
+    <form action="registro" method="post">
       <div class="form-content">
         <div> Cedula de Identidad </div>
-        <th> <input class="form-control" type="text" size="70" placeholder="Cedula de Identidad - Persona que reserva">
+        <th> <input class="form-control" name="pers_ci" type="text" size="70" placeholder="Cedula de Identidad - Persona que reserva">
         </th>
       </div>
 
@@ -17,7 +17,7 @@
       <th>
         <div>Fecha de reservación</div>
         <div>
-          <input class="form-control" type="date">
+          <input class="form-control" name="fecha" type="date">
         </div>
       </th>
 
@@ -30,7 +30,6 @@
             <option value="3">3 Mesas</option>
             <option value="4">4 Mesas</option>
             <option value="5">5 Mesas</option>
-
           </select>
         </div>
       </th>
@@ -38,7 +37,7 @@
       <th>
         <div style="margin-left: 20px"> Numero de personas </div>
         <div style="margin-left: 20px">
-          <input type="number" min="1" max="20" class="form-control">
+          <input type="number" min="1" max="20" name="numerousuarios" class="form-control">
         </div>
       </th>
 
@@ -60,7 +59,7 @@
       &nbsp;
 
       <div>
-        <button class="btn rounded-btn"> Reservar </button>
+        <button class="btn rounded-btn" (click)="addReserva(data)"> Reservar </button>
       </div>
     </form>
   </div>
