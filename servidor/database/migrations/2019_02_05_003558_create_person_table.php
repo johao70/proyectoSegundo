@@ -14,12 +14,12 @@ class CreatePersonTable extends Migration
     public function up()
     {
         Schema::create('person', function (Blueprint $table) {
-            $table ->increments('id');
-            $table ->string('pers_ci');
-            $table ->string('nombre');
-            $table ->string('telefono');
-            $table ->string('correo');
-            $table ->string('clave');
+            $table -> increments('id');
+            $table -> string('pers_ci');
+            $table -> string('nombre');
+            $table -> string('telefono');
+            $table -> string('correo');
+            $table -> string('clave');
         });
     }
 

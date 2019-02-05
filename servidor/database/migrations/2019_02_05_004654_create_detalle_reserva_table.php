@@ -14,12 +14,12 @@ class CreateDetalleReservaTable extends Migration
     public function up()
     {
         Schema::create('detalle_reserva', function (Blueprint $table) {
-            $table->increments('detalle_id');
-            $table->integer('mesa_id');
-            $table->foreign('mesa_id')->references('mesa_id')->on('mesa');
-            $table->integer('reserva_id');
-            $table->foreign('reserva_id')->references('reserva_id')->on('reserva');
-            $table->integer('numerousuarios');
+            $table -> increments('detalle_id');
+            $table -> integer('mesa_id');
+            $table -> foreign('mesa_id')->references('mesa_id')->on('mesa');
+            $table -> integer('reserva_id');
+            $table -> foreign('reserva_id')->references('reserva_id')->on('reserva');
+            $table -> integer('numerousuarios');
         });
     }
 

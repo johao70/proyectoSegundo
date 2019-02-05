@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstadoTable extends Migration
+class CreateHorarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateEstadoTable extends Migration
      */
     public function up()
     {
-        Schema::create('estado', function (Blueprint $table) {
-            $table->increments('estado_id');
-            $table->string('nombre');
+        Schema::create('horario', function (Blueprint $table) {
+            $table -> increments('horario_id');
+            $table -> string('hora');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateEstadoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estado');
+        Schema::dropIfExists('horario');
     }
 }
