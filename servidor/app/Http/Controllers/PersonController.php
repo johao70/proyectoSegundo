@@ -7,16 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class PersonController extends Controller
 {
-    public function index(Request $request)
-    {
-        $data = $request->json()->all();
-        $sql = "select * from person";
-        $response = DB::select($sql);
-        return $response;
-
-    }
-
-    public function createPerson(Request $request)
+    public function crearPerson(Request $request)
     {
         $data = $request -> json() -> all();
         $sql = "insert into person(pers_ci, nombre, telefono, correo, clave) values(?,?,?,?,?)";
@@ -25,7 +16,7 @@ class PersonController extends Controller
         return $response;
     }
 
-    public function updatePerson(Request $request)
+    public function actualizarPerson(Request $request)
      { 
         $data = $request -> json() -> all();
         $sql = "update person set pers_ci = ?, nombre = ?, telefono = ?, correo = ?, clave = ?";
@@ -34,11 +25,20 @@ class PersonController extends Controller
         return $response;
      }
 
-    public function destroyPerson(Request $request){
+    public function eliminarPerson(Request $request){
         $data = $request -> json() -> all();
         $sql = "delete from person where id = ?";
         $parameters = [$data['id']];
         $response = DB::select($sql, $parameters);
         return $response;
+    }
+
+    public function traerPersons(Request $request)
+    {
+        $data = $request->json()->all();
+        $sql = "select * from person";
+        $response = DB::select($sql);
+        return $response;
+
     }
 }

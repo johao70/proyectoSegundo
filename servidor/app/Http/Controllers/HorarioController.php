@@ -1,42 +1,42 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mesa;
+use App\Horario;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\DB;
 
-class MesaController extends Controller
+class HorarioController extends Controller
 {
-    public function crearMesa(Request $request)
+    public function crearHorario(Request $request)
     {
         $data = $request -> json() -> all();
-        $sql = "insert into mesa(nombre, estado) values(?,?)";
-        $parameters = [$data['nombre'], $data['estado']];
+        $sql = "insert into horario(hora) values(?)";
+        $parameters = [$data['hora']];
         $response = DB::select($sql, $parameters);
         return $response;
     }
 
-    public function actualizarMesa(Request $request)
+    public function actualizarHorario(Request $request)
      { 
         $data = $request -> json() -> all();
-        $sql = "update mesa set nombre = ?, estado = ?";
-        $parameters = [$data['nombre'], $data['estado']];
+        $sql = "update horario set hora = ?";
+        $parameters = [$data['hora']];
         $response = DB::select($sql, $parameters);
         return $response;
      }
 
-    public function eliminarMesa(Request $request){
+    public function eliminarHorario(Request $request){
         $data = $request -> json() -> all();
-        $sql = "delete from mesa where mesa_id = ?";
-        $parameters = [$data['mesa_id']];
+        $sql = "delete from horario where horario_id = ?";
+        $parameters = [$data['horario_id']];
         $response = DB::select($sql, $parameters);
         return $response;
     }
 
-    public function traerMesas(Request $request)
+    public function traerHorarios(Request $request)
     {
         $data = $request->json()->all();
-        $sql = "select * from mesa";
+        $sql = "select * from horario";
         $response = DB::select($sql);
         return $response;
 
