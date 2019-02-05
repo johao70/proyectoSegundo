@@ -44,7 +44,7 @@ $router->get('/mesa', ['uses' => 'MesaController@traerMesas']);
 
 
 //horario
-$router->post('/horario', ['uses' => 'Tipo_mesaController@crearHorario']);
-$router->put('/horario', ['uses' => 'Tipo_mesaController@actualizarHorario']);
-$router->delete('/horario', ['uses' => 'Tipo_mesaController@eliminarHorario']);
-$router->get('/horario', ['uses' => 'Tipo_mesaController@traerHorarios']);
+$router->post('/horario', ['uses' => 'HorarioController@crearHorario']);
+$router->put('/horario', ['uses' => 'HorarioController@actualizarHorario']);
+$router->delete('/horario', ['uses' => 'HorarioController@eliminarHorario']);
+$router->get('/horario', ['uses' => 'HorarioController@traerHorarios']);
