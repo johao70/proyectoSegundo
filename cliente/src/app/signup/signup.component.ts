@@ -13,6 +13,7 @@ import { Person } from '../models/person';
     animations: [routerTransition()]
 })
 export class SignupComponent implements OnInit {    
+    person: Person;
     
     constructor(public router: Router, private PersonService: PersonService) {}
 
@@ -24,5 +25,7 @@ export class SignupComponent implements OnInit {
         )
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.person = new Person();
+    }
 }
