@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
-import { HttpClient } from '@angular/common/http';
+
+import { environment } from '../../environments/environment';
+import { PersonService } from '../service/person.service';
+import { Person } from '../models/person';
 
 @Component({
     selector: 'app-signup',
@@ -9,25 +12,16 @@ import { HttpClient } from '@angular/common/http';
     styleUrls: ['./signup.component.scss'],
     animations: [routerTransition()]
 })
-export class SignupComponent implements OnInit {
-    nombre = '';
-    pers_ci = '';
-    telefono = '';
-    correo = '';
-    clave = '';
-    entidadSeleccionada: any;
-    constructor(public router: Router, private http: HttpClient) {}
+export class SignupComponent implements OnInit {    
+    
+    constructor(public router: Router, private PersonService: PersonService) {}
 
-    estaSeleccionado(porVerificar): boolean {
-        if (this.entidadSeleccionada == null) {
-            return false;
-        }
-        return porVerificar.id === this.entidadSeleccionada.id;
-    }
-
-    addPerson(nombre, pers_ci, telefono, correo, clave) {
-        this.http.post('http://localhost:8000/person',JSON.stringify(nombre)).toPromise().then(r => {console.log(r);}).catch(
-          e => console.log(e));  
+    addPerson(data) {
+        this.PersonService.addPerson(data).subscribe(
+            response => {
+                console.log(response);
+            }
+        )
     }
 
     ngOnInit() {}
