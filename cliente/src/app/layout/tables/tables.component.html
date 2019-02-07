@@ -3,51 +3,49 @@
   <h1>Reserva</h1>
 
   <hr>
+
   <div>
-    <form action="registro" method="post">
-      <div class="form-content">
-        <div> Cedula de Identidad </div>
-        <th> <input class="form-control" name="pers_ci" type="text" size="70" placeholder="Cedula de Identidad - Persona que reserva">
-        </th>
-      </div>
 
-      &nbsp;
-
+    <form>
+      <th>
+        <div class="form-content">
+          <div for="choose"> Cedula de Identidad </div>
+          <th> <input id="choose" [(ngModel)]="reserva.id" name="i_like" required size="40" class="form-control" type="text" max="10" placeholder="Cedula de Identidad - Persona que reserva"></th>
+        </div>
+      </th>
       
       <th>
-        <div>Fecha de reservación</div>
-        <div>
-          <input class="form-control" name="fecha" type="date">
+        <div style="margin-left: 20px" for="choose" >Fecha de reservación</div>
+        <div style="margin-left: 20px">
+          <input id="choose" [(ngModel)]="reserva.fecha" name="i_like" required class="form-control" type="date">
         </div>
       </th>
 
       <th>
-        <div style="margin-left: 20px"> ¿ Cuantas mesas desea reservar ?</div>
-        <div style="margin-left: 20px">
+        <div style="margin-left: 20px" for="choose" > ¿ Cuantas mesas desea reservar ?</div>
+        <div style="margin-left: 20px" for="choose" >
           <select class="form-control">
             <option value="1">1 Mesa</option>
             <option value="2">2 Mesas</option>
             <option value="3">3 Mesas</option>
             <option value="4">4 Mesas</option>
             <option value="5">5 Mesas</option>
+
           </select>
         </div>
       </th>
 
       <th>
-        <div style="margin-left: 20px"> Numero de personas </div>
-        <div style="margin-left: 20px">
-          <input type="number" min="1" max="20" name="numerousuarios" class="form-control">
+        <div style="margin-left: 20px" for="choose"> Numero de personas </div>
+        <div style="margin-left: 20px" for="choose">
+          <input id="choose" name="i_like" required type="number" min="1" max="20" class="form-control">
         </div>
       </th>
 
-      &nbsp;
-      &nbsp;
-
       <th>
-        <div style="margin-left: 20px"> Hora </div>
+        <div style="margin-left: 20px"for="choose"> Hora </div>
         <div style="margin-left: 20px">
-          <select class="form-control">
+          <select  id="choose" name="i_like" required class="form-control">
             <option value="1">10:00</option>
             <option value="2">13:00</option>
             <option value="3">18:00</option>
@@ -55,12 +53,11 @@
         </div>
       </th>
 
-      &nbsp;
-      &nbsp;
+      <hr>
 
       <div>
-        <button class="btn rounded-btn" (click)="addReserva(data)"> Reservar </button>
-      </div>
+        <a class="form-control btn button primary" (click)="addReserva(data)">Registrarse</a>
+      </div>      
     </form>
   </div>
 </div>

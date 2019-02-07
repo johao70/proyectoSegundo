@@ -9,18 +9,47 @@ class PersonController extends Controller
 {
     public function crearPerson(Request $request)
     {
-        $data = $request -> json() -> all();
-        $sql = "insert into person(pers_ci, nombre, telefono, correo, clave) values(?,?,?,?,?)";
-        $parameters = [$data['pers_ci'], $data['nombre'], $data['telefono'], $data['correo'], $data['clave']];
-        $response = DB::select($sql, $parameters);
-        return $response;
+        try{
+            $data = $request -> json() -> all();
+            $sql = "insert into person(pers_ci, nombre, telefono, correo, clave) values(?,?,?,?,?)";
+            $parameters = 
+            [$data['pers_ci'], 
+             $data['nombre'], 
+             $data['telefono'], 
+             $data['correo'], 
+             $data['clave']];
+            $response = DB::select($sql, $parameters);
+            if ($response){
+                return response()->json($parameters,201);
+            }else {
+                return response()->json(false);
+            }
+        
+        }catch(QueryException $e){
+            return response()->json($e,500);
+        }catch(\PDOException $e){
+            return response()->json($e,500);
+        }
     }
 
     public function actualizarPerson(Request $request)
      { 
         $data = $request -> json() -> all();
-        $sql = "update person set pers_ci = ?, nombre = ?, telefono = ?, correo = ?, clave = ?";
-        $parameters = [$data['pers_ci'], $data['nombre'], $data['telefono'], $data['correo'], $data['clave']];
+        $sql = "update person set 
+            pers_ci = ?, 
+            nombre = ?, 
+            telefono = ?, 
+            correo = ?, 
+            clave = ?
+            where id = ?";
+
+        $parameters = 
+        [$data['pers_ci'], 
+         $data['nombre'], 
+         $data['telefono'], 
+         $data['correo'], 
+         $data['clave'],
+         $data['id']];
         $response = DB::select($sql, $parameters);
         return $response;
      }
@@ -39,6 +68,5 @@ class PersonController extends Controller
         $sql = "select * from person";
         $response = DB::select($sql);
         return $response;
-
     }
 }

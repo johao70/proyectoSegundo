@@ -1,0 +1,34 @@
+import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ServiciosService {
+
+  constructor(private http: HttpClient) { }
+
+  get(url: string){
+    return this.http.get(environment.API_URL+url);
+  }
+
+  post(url:string,data:any){
+    return this.http.post(environment.API_URL+url,data);
+  };
+
+  put(url:string,data:any){
+    return this.http.put(environment.API_URL+url,data);
+  };
+
+  delete(url:string,data:any){
+    return this.http.delete(environment.API_URL+url,data);
+  };
+
+  login(correo:string, clave:string) {
+    return this.http.post('http://localhost:8000/person', {
+      correo: correo,
+      clave: clave,     
+    });     
+  }
+}
