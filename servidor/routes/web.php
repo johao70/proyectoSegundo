@@ -19,7 +19,8 @@ $router->get('/', function () use ($router) {
 $router->post('/person', ['uses' => 'PersonController@crearPerson']);
 $router->put('/person', ['uses' => 'PersonController@actualizarPerson']);
 $router->delete('/person', ['uses' => 'ReservaController@eliminarPerson']);
-$router->get('/person', ['uses' => 'PersonController@traerPersons']);
+// $router->get('/person', ['uses' => 'PersonController@traerPersons']);
+$router->get('/person', ['uses' => 'PersonController@traerIDperson']);
 
 
 //reserva   OK

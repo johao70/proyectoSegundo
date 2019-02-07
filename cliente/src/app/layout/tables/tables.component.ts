@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
-
+import { HttpClient } from '@angular/common/http';
 import { ServiciosService } from '../../service/servicios.service';
+import { Person } from '../../models/person';
 import { Reserva } from '../../models/reserva';
 
 @Component({
@@ -13,9 +14,10 @@ import { Reserva } from '../../models/reserva';
 export class TablesComponent implements OnInit {
 
   reserva: Reserva;
+  people: Array<Person>;
   reservation: Array<Reserva>;
 
-  constructor(private Servicios: ServiciosService) { }
+  constructor(private Servicios: ServiciosService, private http: HttpClient) { }
 
   ngOnInit() {
     this.get();
@@ -23,9 +25,9 @@ export class TablesComponent implements OnInit {
   }
 
   get() {
-    this.Servicios.get('reserva').subscribe(
+    this.Servicios.get('person').subscribe(
         response => {
-            this.reservation = response as Array<Reserva>;
+            this.people = response as Array<Person>;;
         },
         error => {
             console.log(error);
@@ -65,5 +67,5 @@ delete(reserva:Reserva){
         console.log(error);
       }          
     );
-}
+  }
 }

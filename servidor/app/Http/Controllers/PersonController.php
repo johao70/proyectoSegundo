@@ -62,10 +62,19 @@ class PersonController extends Controller
         return $response;
     }
 
-    public function traerPersons(Request $request)
+    // public function traerPersons(Request $request)
+    // {
+    //     $data = $request->json()->all();
+    //     $sql = "select * from person";
+    //     $response = DB::select($sql);
+    //     return $response;
+    // }
+
+    public function traerIDperson(Request $request)
     {
         $data = $request->json()->all();
-        $sql = "select * from person";
+        $sql = "select id from person where pers_ci = ?";
+        $parameters = [$data['pers_ci']];
         $response = DB::select($sql);
         return $response;
     }
