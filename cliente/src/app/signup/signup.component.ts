@@ -19,8 +19,8 @@ export class SignupComponent implements OnInit {
     constructor(public router: Router, private Servicios: ServiciosService) {}
 
     ngOnInit() {
-        this.get();
-        this.person = new Person();
+      this.get();
+      this.person = new Person();
     }
 
     get() {

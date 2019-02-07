@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
-
+import { HttpModule } from '@angular/http';
 import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables.component';
 
@@ -11,7 +11,8 @@ import { TablesComponent } from './tables.component';
       CommonModule,
       TablesRoutingModule,
       CalendarModule,
-      FormsModule
+      FormsModule,
+      HttpModule
     ],
     declarations: [TablesComponent]
 })

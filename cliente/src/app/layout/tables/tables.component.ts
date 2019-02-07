@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 
-import { ReservaService } from '../../service/reserva.service';
+import { ServiciosService } from '../../service/servicios.service';
 import { Reserva } from '../../models/reserva';
-// import { DetalleReservaService } from '../../service/detalle-reserva.service';
-// import { Detalle_reserva } from '../../models/detalle_reserva';
 
 @Component({
     selector: 'app-tables',
@@ -15,31 +13,57 @@ import { Reserva } from '../../models/reserva';
 export class TablesComponent implements OnInit {
 
   reserva: Reserva;
-//   detallereserva: Detalle_reserva;
+  reservation: Array<Reserva>;
 
-  constructor(private ReservaService: ReservaService
-    // , private DetalleReservaService: DetalleReservaService
-    ) { }
+  constructor(private Servicios: ServiciosService) { }
 
-  addReserva(data) {
-    this.ReservaService.addReserva(data).subscribe(
+  ngOnInit() {
+    this.get();
+    this.reserva = new Reserva();
+  }
+
+  get() {
+    this.Servicios.get('reserva').subscribe(
         response => {
-            console.log(response);
+            this.reservation = response as Array<Reserva>;
+        },
+        error => {
+            console.log(error);
         }
-    )
-  };
+    );
+}
 
-//   addDetallereserva(data) {
-//     this.DetalleReservaService.addDetallereserva(data).subscribe(
-//         response => {
-//             console.log(response);
-//         }
-//     )
-//   };
+post(){
+    this.Servicios.post('reserva',this.reserva).subscribe(
+      response => {
+        this.get();
+      },
+      error => {
+        console.log(error);
+      }
+      
+    );
+  }
 
+put(reserva:Reserva){
+    this.Servicios.put('reserva',reserva).subscribe(
+      response => {
+        this.get();
+      },
+      error => {
+        console.log(error);
+      }          
+    );
+}
 
-    ngOnInit() {
-      this.reserva = new Reserva();
-    //   this.detallereserva = new Detalle_reserva();
-    }
+delete(reserva:Reserva){
+    this.Servicios.delete('reserva',reserva).subscribe(
+      response => {
+        this.get();
+      },
+      error => {
+        console.log(error);
+      }          
+    );
+}
 }
