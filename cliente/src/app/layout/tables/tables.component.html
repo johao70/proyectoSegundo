@@ -49,7 +49,7 @@
       <hr>
 
       <div>
-        <a class="form-control btn button primary" (click)="post(reserva)">Registrarse</a>
+        <button type="submit" class="form-control btn button primary" [routerLink]="['/dashboard']" (click)="post(reserva)">Registrarse</button>
       </div>
     </form>
   </div>
