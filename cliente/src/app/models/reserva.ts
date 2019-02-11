@@ -1,9 +1,10 @@
 export class Reserva{
 
-  reserva_id: Number;
-  id: String;
-  horario_id: String;
+  pers_ci: String;
   fecha: Date;
+  numeromesas: Number;
+  numeropersonas: Number;
+  hora: String;
 
   constructor (){
   }

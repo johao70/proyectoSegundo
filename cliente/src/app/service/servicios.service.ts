@@ -20,15 +20,4 @@ export class ServiciosService {
   put(url:string,data:any){
     return this.http.put(environment.API_URL+url,data);
   };
-
-  delete(url:string,data:any){
-    return this.http.delete(environment.API_URL+url,data);
-  };
-
-  login(correo:string, clave:string) {
-    return this.http.post('http://localhost:8000/person', {
-      correo: correo,
-      clave: clave,     
-    });     
-  }
 }

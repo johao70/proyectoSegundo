@@ -7,57 +7,50 @@
   <div>
 
     <form>      
-      <th>
+      <div>
         <div class="form-content">
           <div for="choose"> Cedula de Identidad </div>
-            <th> <input id="choose" [(ngModel)]="reserva.id" name="i_like" required size="40" class="form-control" type="text" max="10" placeholder="Cedula de Identidad - Persona que reserva"></th>
+            <input id="choose" [(ngModel)]="reserva.pers_ci" name="pers_ci" class="form-control" type="text" placeholder="Cedula de Identidad">
         </div>
-      </th>
+      </div>
 
-  <th>
-    <div style="margin-left: 20px" for="choose">Fecha de reservación</div>
-    <div style="margin-left: 20px">
-      <input id="choose" [(ngModel)]="reserva.fecha" name="i_like" required class="form-control" type="date">
-    </div>
-  </th>
+      <div>
+        <div for="choose">Fecha de reservación</div>
+        <div>
+          <input id="choose" [(ngModel)]="reserva.fecha" name="fecha" class="form-control" type="date">
+        </div>
+      </div>
 
-  <th>
-    <div style="margin-left: 20px" for="choose"> ¿ Cuantas mesas desea reservar ?</div>
-    <div style="margin-left: 20px" for="choose">
-      <select class="form-control">
-        <option value="1">1 Mesa</option>
-        <option value="2">2 Mesas</option>
-        <option value="3">3 Mesas</option>
-        <option value="4">4 Mesas</option>
-        <option value="5">5 Mesas</option>
+      <div>
+        <div for="choose"> ¿Cuantas mesas desea reservar?</div>
+        <div for="choose">
+          <input id="choose" [(ngModel)]="reserva.numeromesas" min="1" max="5" name="numeromesas" class="form-control" type="number">
+        </div>
+      </div>
 
-      </select>
-    </div>
-  </th>
+      <div>
+        <div for="choose"> Numero de personas </div>
+        <div for="choose">
+          <input id="choose" name="numeropersonas" [(ngModel)]="reserva.numeropersonas" type="number" min="1" max="20" class="form-control">
+        </div>
+      </div>
 
-  <th>
-    <div style="margin-left: 20px" for="choose"> Numero de personas </div>
-    <div style="margin-left: 20px" for="choose">
-      <input id="choose" name="i_like" required type="number" min="1" max="20" class="form-control">
-    </div>
-  </th>
+      <div>
+        <div for="choose"> Hora </div>
+        <div>
+          <select id="choose" [(ngModel)]="reserva.hora" name="hora" class="form-control">
+            <option value="10:00">10:00</option>
+            <option value="13:00">13:00</option>
+            <option value="18:00">18:00</option>
+          </select>
+        </div>
+      </div>
 
-  <th>
-    <div style="margin-left: 20px" for="choose"> Hora </div>
-    <div style="margin-left: 20px">
-      <select id="choose" name="i_like" required class="form-control">
-        <option value="1">10:00</option>
-        <option value="2">13:00</option>
-        <option value="3">18:00</option>
-      </select>
-    </div>
-  </th>
+      <hr>
 
-  <hr>
-
-  <div>
-    <a class="form-control btn button primary" (click)="post(reserva)">Registrarse</a>
+      <div>
+        <a class="form-control btn button primary" (click)="post(reserva)">Registrarse</a>
+      </div>
+    </form>
   </div>
-  </form>
-</div>
 </div>

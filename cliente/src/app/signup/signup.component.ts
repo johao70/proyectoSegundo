@@ -44,27 +44,5 @@ export class SignupComponent implements OnInit {
           }
           
         );
-      }
-
-    put(person:Person){
-        this.Servicios.put('person',person).subscribe(
-          response => {
-            this.get();
-          },
-          error => {
-            console.log(error);
-          }          
-        );
-    }
-
-    delete(person:Person){
-        this.Servicios.delete('person',person).subscribe(
-          response => {
-            this.get();
-          },
-          error => {
-            console.log(error);
-          }          
-        );
     }
 }
