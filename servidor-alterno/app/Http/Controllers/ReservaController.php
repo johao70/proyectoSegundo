@@ -34,9 +34,7 @@ class ReservaController extends Controller
     public function consultar(Request $request)
     {
         $data = $request->json()->all();
-        $sql = "select * from reserva where pers_ci = ?";
-        $parameters = 
-        [$data['pers_ci']];
+        $sql = "select * from reserva";
         $response = DB::select($sql);
         return $response;
     }
