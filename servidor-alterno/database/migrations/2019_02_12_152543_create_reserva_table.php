@@ -14,12 +14,15 @@ class CreateReservaTable extends Migration
     public function up()
     {
         Schema::create('reserva', function (Blueprint $table) {
-            $table->increments('id');
-            $table->String('pers_ci',20)->nullable($value = true);
-            $table->Date('fecha')->nullable($value = true);
-            $table->Integer('numeromesas')->nullable($value = true);
+            $table->increments('id_reserva');
+            $table->string('pers_ci')->unsigned();            
+            $table->foreign('pers_ci')->references('pers_ci')->on('person');
+            $table->integer('id_mesa')->unsigned();            
+            $table->foreign('id_mesa')->references('id_mesa')->on('mesa');
+            $table->integer('id_horario')->unsigned();            
+            $table->foreign('id_horario')->references('id_horario')->on('horario');            
             $table->Integer('numeropersonas')->nullable($value = true);
-            $table->String('hora')->nullable($value = true);
+            $table->Date('fecha')->nullable($value = true);
         });
     }
 

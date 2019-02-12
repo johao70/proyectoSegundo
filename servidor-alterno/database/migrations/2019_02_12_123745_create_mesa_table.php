@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHorarioTable extends Migration
+class CreateMesaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateHorarioTable extends Migration
      */
     public function up()
     {
-        Schema::create('horario', function (Blueprint $table) {
-            $table -> increments('horario_id');
-            $table -> string('hora');
+        Schema::create('mesa', function (Blueprint $table) {
+            $table->increments('id_mesa');
+            $table->string('numeromesas',150);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateHorarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('horario');
+        Schema::dropIfExists('mesa');
     }
 }

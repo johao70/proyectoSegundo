@@ -23,8 +23,14 @@
 
       <div>
         <div for="choose"> ¿Cuantas mesas desea reservar?</div>
-        <div for="choose">
-          <input id="choose" [(ngModel)]="reserva.numeromesas" min="1" max="5" name="numeromesas" class="form-control" type="number">
+        <div for="choose">          
+          <select id="choose" [(ngModel)]="reserva.id_mesa" name="id_mesa" class="form-control">            
+            <option value="1">1 Mesa</option>
+            <option value="2">2 Mesas</option>
+            <option value="3">3 Mesas</option>
+            <option value="4">4 Mesas</option>
+            <option value="5">5 Mesas</option>
+          </select>          
         </div>
       </div>
 
@@ -38,10 +44,10 @@
       <div>
         <div for="choose"> Hora </div>
         <div>
-          <select id="choose" [(ngModel)]="reserva.hora" name="hora" class="form-control">
-            <option value="10:00">10:00</option>
-            <option value="13:00">13:00</option>
-            <option value="18:00">18:00</option>
+          <select id="choose" [(ngModel)]="reserva.id_horario" name="id_horario" class="form-control">
+            <option value="1">10:00</option>
+            <option value="2">13:00</option>
+            <option value="3">18:00</option>
           </select>
         </div>
       </div>

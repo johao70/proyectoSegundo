@@ -1,10 +1,10 @@
 export class Reserva{
 
   pers_ci: String;
-  fecha: Date;
-  numeromesas: Number;
-  numeropersonas: Number;
-  hora: String;
+  id_mesa: number;
+  id_horario: number;
+  numeropersonas: number;
+  fecha: Date;  
 
   constructor (){
   }

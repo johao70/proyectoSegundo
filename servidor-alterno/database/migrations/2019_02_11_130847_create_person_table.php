@@ -13,13 +13,11 @@ class CreatePersonTable extends Migration
      */
     public function up()
     {
-        Schema::create('person', function (Blueprint $table) {
-            $table->increments('id');                    
-            $table->string('nombre',150)->nullable($value = true);
-            $table->string('pers_ci',20)->nullable($value = true);
-            $table->string('telefono',10)->nullable($value = true);
-            $table->string('correo',255)->nullable($value = true);
-            $table->string('clave',20)->nullable($value = true);            
+        Schema::create('person', function (Blueprint $table) {             
+            $table->string('pers_ci',20)->primary();                
+            $table->string('nombre',250);
+            $table->string('telefono',10);
+            $table->string('correo',255);
         });
     }
 

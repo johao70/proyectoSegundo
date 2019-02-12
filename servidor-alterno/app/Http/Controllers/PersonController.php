@@ -10,7 +10,7 @@ class PersonController extends Controller
     {
         try{
             $data = $request -> json() -> all();
-            $sql = "insert into person(nombre, pers_ci, telefono, correo) values(?,?,?,?)";
+            $sql = "insert into person(pers_ci, nombre, telefono, correo) values(?,?,?,?)";
             $parameters = 
             [$data['pers_ci'], 
              $data['nombre'], 

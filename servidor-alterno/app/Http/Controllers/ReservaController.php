@@ -10,13 +10,13 @@ class ReservaController extends Controller
     {
         try{
             $data = $request -> json() -> all();
-            $sql = "insert into reserva(pers_ci, fecha, numeromesas, numeropersonas, hora) values(?,?,?,?,?)";
+            $sql = "insert into reserva(pers_ci, id_mesa, id_horario, numeropersonas, fecha) values(?,?,?,?,?)";
             $parameters = 
             [$data['pers_ci'], 
-             $data['fecha'], 
-             $data['numeromesas'], 
+             $data['id_mesa'], 
+             $data['id_horario'], 
              $data['numeropersonas'],
-             $data['hora']];
+             $data['fecha']];
             $response = DB::select($sql, $parameters);
             if ($response){
                 return response()->json($parameters,201);
