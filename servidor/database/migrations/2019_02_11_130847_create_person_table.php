@@ -17,7 +17,7 @@ class CreatePersonTable extends Migration
             $table->string('pers_ci',20)->primary();                
             $table->string('nombre',250);
             $table->string('telefono',10);
-            $table->string('correo',255);
+            $table->string('correo',250);
         });
     }
 

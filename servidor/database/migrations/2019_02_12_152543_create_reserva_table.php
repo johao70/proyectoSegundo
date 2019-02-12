@@ -21,8 +21,8 @@ class CreateReservaTable extends Migration
             $table->foreign('id_mesa')->references('id_mesa')->on('mesa');
             $table->integer('id_horario')->unsigned();            
             $table->foreign('id_horario')->references('id_horario')->on('horario');            
-            $table->Integer('numeropersonas')->nullable($value = true);
-            $table->Date('fecha')->nullable($value = true);
+            $table->Integer('numeropersonas');
+            $table->Date('fecha');
         });
     }
 
