@@ -1,6 +1,6 @@
-<div>
+<div class="container">
 
-  <h1>Reserva</h1>
+  <h1> Reserva </h1>
 
   <hr>
 
@@ -10,26 +10,26 @@
       <div>
         <div class="form-content">
           <div for="choose"> Cedula de Identidad </div>
-            <input id="choose" [(ngModel)]="reserva.pers_ci" name="pers_ci" class="form-control" type="text" placeholder="Cedula de Identidad">
+            <input id="choose" [(ngModel)]="reserva.pers_ci" name="pers_ci" class="form-control" max="10" type="number" placeholder="Cedula de Identidad">
         </div>
       </div><br>
 
       <div>
-        <div for="choose">Fecha de reservación</div>
+        <div for="choose"> Fecha de reservación </div>
         <div>
           <input id="choose" [(ngModel)]="reserva.fecha" name="fecha" class="form-control" type="date">
         </div>
       </div><br>
 
       <div>
-        <div for="choose"> ¿Cuantas mesas desea reservar?</div>
+        <div for="choose"> ¿Cuantas mesas desea reservar? </div>
         <div for="choose">          
           <select id="choose" [(ngModel)]="reserva.id_mesa" name="id_mesa" class="form-control">            
-            <option value="1">1 Mesa</option>
-            <option value="2">2 Mesas</option>
-            <option value="3">3 Mesas</option>
-            <option value="4">4 Mesas</option>
-            <option value="5">5 Mesas</option>
+            <option value="1"> 1 Mesa </option>
+            <option value="2"> 2 Mesas </option>
+            <option value="3"> 3 Mesas </option>
+            <option value="4"> 4 Mesas </option>
+            <option value="5"> 5 Mesas </option>
           </select>          
         </div>
       </div><br>
@@ -50,7 +50,7 @@
             <option value="3">18:00</option>
           </select>
         </div>
-      </div><br>
+      </div>
 
       <hr>
 

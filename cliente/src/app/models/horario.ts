@@ -1,6 +1,6 @@
 export class Horario{
 
-    horario_id: Number;
+    id_horario: Number;
     hora: String;
 
     constructor(){

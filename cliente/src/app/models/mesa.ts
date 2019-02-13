@@ -1,8 +1,7 @@
 export class Mesa{
 
-    mesa_id: Number;
-    nombre: String;
-    estado: Boolean;
+    id_mesa: Number;
+    numeromesas: String;
 
     constructor(){
     }
