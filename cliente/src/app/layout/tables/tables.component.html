@@ -12,14 +12,14 @@
           <div for="choose"> Cedula de Identidad </div>
             <input id="choose" [(ngModel)]="reserva.pers_ci" name="pers_ci" class="form-control" type="text" placeholder="Cedula de Identidad">
         </div>
-      </div>
+      </div><br>
 
       <div>
         <div for="choose">Fecha de reservación</div>
         <div>
           <input id="choose" [(ngModel)]="reserva.fecha" name="fecha" class="form-control" type="date">
         </div>
-      </div>
+      </div><br>
 
       <div>
         <div for="choose"> ¿Cuantas mesas desea reservar?</div>
@@ -32,14 +32,14 @@
             <option value="5">5 Mesas</option>
           </select>          
         </div>
-      </div>
+      </div><br>
 
       <div>
         <div for="choose"> Numero de personas </div>
         <div for="choose">
           <input id="choose" name="numeropersonas" [(ngModel)]="reserva.numeropersonas" type="number" min="1" max="20" class="form-control">
         </div>
-      </div>
+      </div><br>
 
       <div>
         <div for="choose"> Hora </div>
@@ -50,13 +50,12 @@
             <option value="3">18:00</option>
           </select>
         </div>
-      </div>
+      </div><br>
 
       <hr>
 
-      <div>
-        <button type="submit" class="form-control btn button primary" [routerLink]="['/dashboard']" (click)="post(reserva)">Registrarse</button>
-      </div>
+      <button type="submit" class="form-control btn button primary" [routerLink]="['/dashboard']" (click)="post(reserva)">Registrarse</button>
+      
     </form>
   </div>
 </div>
